@@ -1,0 +1,25 @@
+.home-container{
+    height: 100%;
+    width: 100%;
+    .name-button-container{
+        height: 80%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        padding: 5%;
+        .name{
+            color: white;
+            font-size: 8rem;
+            font-family: 'Medula One', cursive;
+            display: block;
+        }
+        .button{
+            background: goldenrod;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            display: inline-block;
+            font-size: 1.5rem;
+            padding: 2%;
+            margin-top: 2%;
+        }
+}
+}
