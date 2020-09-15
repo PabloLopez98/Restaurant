@@ -7,6 +7,8 @@ function Home() {
     const variants = {
         initial: { x: -1000, opacity: 0 },
         animate: { x: 0, opacity: 1 },
+        initialSocial: { x: 500, opacity: 0 },
+        animateSocial: { x: 0, opacity: 1 },
         whileHover: {
             color: "white",
             scale: 1.2,
@@ -33,14 +35,19 @@ function Home() {
                     variants={variants}
                     className="button">Download Menu</motion.span>
             </div>
-            <div className="social-medias-container">
+            <motion.div
+                initial="initialSocial"
+                animate="animateSocial"
+                transition={{ duration: 3 }}
+                variants={variants}
+                className="social-medias-container">
                 <ul>
                     <li><i class="fab fa-snapchat"></i></li>
                     <li><i class="fab fa-instagram"></i></li>
                     <li><i class="fab fa-twitter"></i></li>
                     <li><i class="fab fa-youtube"></i></li>
                 </ul>
-            </div>
+            </motion.div>
         </div>
     );
 }
