@@ -28,6 +28,11 @@
                 align-items: center;
                 height: 100%;
                 width: 100%;
+
+                li > .active{
+                    border-bottom: 1px solid goldenrod;
+                }
+
                 li:first-child{
                     font-size: 3rem;
                 }
@@ -35,6 +40,7 @@
                     color: white;
                     margin-right: 2%;
                     font-size: 1.3rem;
+                    cursor: pointer;
                 }
             }
         }

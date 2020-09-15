@@ -1,4 +1,6 @@
 import React from 'react';
+import * as Scroll from 'react-scroll';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import Home from './components/Home';
 import Experience from './components/Experience';
 import Gallery from './components/Gallery';
@@ -11,54 +13,41 @@ import myVideo from './Videos/thevid.mp4';
 import './App.scss';
 
 function App() {
-
   const variants = {
-    initial: { y: -1000, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
+    initial: { x: -1000, opacity: 0 },
+    animate: { x: 0, opacity: 1 },
   }
-
   return (
     <div className="App">
-      {/* 
-        react-player, overlay, themenu-container
-
-        z-index: -2, -1, ,3
-      
-      */}
-
       <ReactPlayer
         className="react-player"
-        playing='true'
-        loop='true'
         url={myVideo}
+        muted='true'
+        volume='0'
+        //playing='true'
+        loop='true'
         width='100%'
-        height='auto%'
+        height='auto'
       />
       <div className="overlay"></div>
-      <motion.div
-        initial="initial"
-        animate="animate"
-        transition={{ duration: 1 }}
-        variants={variants}
-        className="themenu-container">
+      <div className="themenu-container">
         <div className="themenu">
-          <ul>
+          <motion.ul
+            initial="initial"
+            animate="animate"
+            transition={{ duration: 2 }}
+            variants={variants}
+          >
             <li><i class="fas fa-pizza-slice"></i></li>
-            <li>Home</li>
-            <li>Experience</li>
-            <li>Gallery</li>
-            <li>Menu</li>
-            <li>Story</li>
-            <li>Contact</li>
-          </ul>
+            <li><Link to="home" offset={0} spy={true} activeClass="active" smooth={true} duration={1000}>Home</Link></li>
+            <li><Link to="experience" offset={0} spy={true} activeClass="active" smooth={true} duration={1000}>Experience</Link></li>
+            <li><Link to="gallery" offset={0} spy={true} activeClass="active" smooth={true} duration={1000}>Gallery</Link></li>
+            <li><Link to="menu" offset={0} spy={true} activeClass="active" smooth={true} duration={1000}>Menu</Link></li>
+            <li><Link to="story" offset={0} spy={true} activeClass="active" smooth={true} duration={1000}>Story</Link></li>
+            <li><Link to="contact" offset={0} spy={true} activeClass="active" smooth={true} duration={1000}>Contact</Link></li>
+          </motion.ul>
         </div>
-      </motion.div>
-      {/* 
-        Rest of containers
-
-        z-index: 0
-      
-      */}
+      </div>
       <div className="home">
         <Home />
       </div>

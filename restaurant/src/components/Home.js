@@ -22,13 +22,13 @@ function Home() {
                 <motion.span
                     initial="initial"
                     animate="animate"
-                    transition={{ duration: 2 }}
+                    transition={{ duration: 2.5 }}
                     variants={variants}
-                    className="name"> Lorenzo's Italian<br />Diner <span style={{ color: "goldenrod" }}>.</span></motion.span>
+                    className="name"> Lorenzo's Italian<br />Restaurant <span style={{ color: "goldenrod" }}>.</span></motion.span>
                 <motion.span
                     initial="initial"
                     animate="animate"
-                    transition={{ duration: 2.5 }}
+                    transition={{ duration: 3 }}
                     whileHover="whileHover"
                     variants={variants}
                     className="button">Download Menu</motion.span>
