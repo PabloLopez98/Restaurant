@@ -8,6 +8,7 @@
         bottom: 0;
         padding: 5%;
         .name{
+            width: 50%;
             color: white;
             font-size: 8rem;
             font-family: 'Medula One', cursive;
@@ -21,5 +22,29 @@
             padding: 2%;
             margin-top: 2%;
         }
+}
+.social-medias-container{
+    height: 40%;
+    width: 5%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    ul{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        text-align: center;
+        align-items: center;
+        list-style: none;
+        background: goldenrod;
+        i{
+            font-size: 3rem;
+            color: black;
+            &:hover{
+                color: white;
+                transition: all .3s ease-in-out;
+            }
+        }
+    }
 }
 }

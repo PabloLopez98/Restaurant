@@ -24,7 +24,7 @@ function App() {
         url={myVideo}
         muted='true'
         volume='0'
-        //playing='true'
+        playing='true'
         loop='true'
         width='100%'
         height='auto'
