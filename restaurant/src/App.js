@@ -5,7 +5,6 @@ import Home from './components/Home';
 import Experience from './components/Experience';
 import Gallery from './components/Gallery';
 import Menu from './components/Menu';
-import Story from './components/Story';
 import Contact from './components/Contact';
 import { motion } from 'framer-motion';
 import ReactPlayer from 'react-player';
@@ -24,7 +23,7 @@ function App() {
         url={myVideo}
         muted='true'
         volume='0'
-        playing='true'
+        //playing='true'
         loop='true'
         width='100%'
         height='auto'
@@ -43,7 +42,6 @@ function App() {
             <li><Link to="experience" offset={0} spy={true} activeClass="active" smooth={true} duration={1000}>Experience</Link></li>
             <li><Link to="gallery" offset={0} spy={true} activeClass="active" smooth={true} duration={1000}>Gallery</Link></li>
             <li><Link to="menu" offset={0} spy={true} activeClass="active" smooth={true} duration={1000}>Menu</Link></li>
-            <li><Link to="story" offset={0} spy={true} activeClass="active" smooth={true} duration={1000}>Story</Link></li>
             <li><Link to="contact" offset={0} spy={true} activeClass="active" smooth={true} duration={1000}>Contact</Link></li>
           </motion.ul>
         </div>
@@ -59,9 +57,6 @@ function App() {
       </div>
       <div className="menu">
         <Menu />
-      </div>
-      <div className="story">
-        <Story />
       </div>
       <div className="contact">
         <Contact />
