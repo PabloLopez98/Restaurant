@@ -68,10 +68,17 @@
         display: flex;
         justify-content: center;
         .left{
+            display: flex;
+            justify-content: center;
             width: 60%;
             height: 100%;
             margin-right: 2%;
-            background: red;
+            .react-player{
+                z-index:0;
+                position: absolute;
+                width: 100%;
+                height: auto;
+             }
         }
         .right{
             width: 30%;

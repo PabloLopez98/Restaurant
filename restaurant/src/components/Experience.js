@@ -4,11 +4,12 @@ import { motion } from 'framer-motion';
 import imgOne from '../Images/iconic.jpg';
 import imgTwo from '../Images/boattwo.jpg';
 import imgThree from '../Images/outside.jpg';
-import imgFour from '../Images/iconic.jpg';
-import imgFive from '../Images/iconic.jpg';
-import imgSix from '../Images/iconic.jpg';
+import imgFour from '../Images/chef.jpg';
+import imgFive from '../Images/people.jpg';
+import imgSix from '../Images/inside.jpg';
 import ReactPlayer from 'react-player';
 import myVideo from '../Videos/video.mp4';
+import myVideoTwo from '../Videos/lastvideo.mp4';
 
 function Experience() {
     return (
@@ -35,7 +36,16 @@ function Experience() {
                 </span>
             </div>
             <div className="middle">
-                <div className="left"><img /></div>
+                <div className="left">
+                    <ReactPlayer
+                        className="react-player"
+                        url={myVideoTwo}
+                        muted='true'
+                        volume='0'
+                        //playing='true'
+                        loop='true'
+                    />
+                </div>
                 <div className="right"><img src={imgThree} /></div>
             </div>
             <div className="bottom">
