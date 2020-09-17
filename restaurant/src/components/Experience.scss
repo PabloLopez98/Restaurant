@@ -3,14 +3,12 @@
     height: 100%;
     padding: 20% 5%;
     position: relative;
-    background: black;
     .title{
-        width: 50%;
-        height: 10%;
         top: 10%;
         left: 10%;
         position: absolute;
-        background: black;
+        font-size: 15rem;
+        color: white;
     }
     .top{
         height: 40%;
@@ -21,29 +19,47 @@
         .first{
             width: 30%;
             height: 33%;
-            background: red;
             margin-right: 2%;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: auto;
+            }
         }
         .second{
+            position: relative;
             width: 30%;
             height: 33%;
-            background: blue;
             margin-top: 10%;
             margin-right: 2%;
+            overflow: hidden;
+            .react-player{
+               z-index:0;
+               position: absolute;
+               width: 100%;
+               height: auto;
+            }
         }
         .third{
             width: 30%;
             height: 70%;
             margin-top: 20%;
-            background: purple;
+            overflow: hidden;
+            img{
+                width: auto;
+                height: 100%;
+            }
         }
         .text{
             width: 50%;
-            height: 30%;
+            height: 35%;
             bottom: 10%;
             left: 10%;
             position: absolute;
-            background: white;
+            color: white;
+            text-shadow: black;
+            font-size: 1.5rem;
+            line-height: 2;
         }
     }
     .middle{
@@ -61,7 +77,12 @@
             width: 30%;
             height: 100%;
             margin-left: 2%;
-            background: blue;
+            margin-top: 10%;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: auto;
+            }
         }
     }
     .bottom{
@@ -75,20 +96,28 @@
             height: 70%;
             margin-top: 2%;
             margin-right: 2%;
-            background: purple;
+            overflow: hidden;
+            img{
+                width: auto;
+                height: 100%;
+            }
         }
         .second{
             width: 30%;
             height: 33%;
-            background: blue;
             margin-top: 40%;
             margin-right: 2%;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: auto;
+            }
         }
         .third{
             width: 30%;
             height: 33%;
             margin-top: 30%;
-            //background: pink;
+            overflow: hidden;
             img{
                 width: 100%;
                 height: auto;
@@ -96,11 +125,14 @@
         }
         .text{
             width: 50%;
-            height: 30%;
+            height: 35%;
             top: 6%;
             right: 10%;
             position: absolute;
-            background: white;
+            color: white;
+            text-shadow: black;
+            font-size: 1.5rem;
+            line-height: 2;
         }
     }
 }
