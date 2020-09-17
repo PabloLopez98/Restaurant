@@ -1,12 +1,12 @@
 import React from 'react';
 import './Experience.scss';
 import { motion } from 'framer-motion';
-import imgOne from '../Images/iconic.jpg';
-import imgTwo from '../Images/boattwo.jpg';
-import imgThree from '../Images/outside.jpg';
-import imgFour from '../Images/chef.jpg';
-import imgFive from '../Images/people.jpg';
-import imgSix from '../Images/inside.jpg';
+import imgOne from '../ImagesA/iconic.jpg';
+import imgTwo from '../ImagesA/boattwo.jpg';
+import imgThree from '../ImagesA/outside.jpg';
+import imgFour from '../ImagesA/chef.jpg';
+import imgFive from '../ImagesA/people.jpg';
+import imgSix from '../ImagesA/inside.jpg';
 import ReactPlayer from 'react-player';
 import myVideo from '../Videos/video.mp4';
 import myVideoTwo from '../Videos/lastvideo.mp4';
