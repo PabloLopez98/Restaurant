@@ -1,0 +1,67 @@
+.menu-container{
+    width: 100%;
+    height: 100%;
+    padding: 0 5%;
+    padding-top: 20%;
+    .title{
+        font-size: 15rem;
+        color: white;
+        display: block;
+    }
+    .section{
+        font-size: 3.5rem;
+        color: white;
+    }
+    .divider{
+        width: 100%;
+        height: 1px;
+        margin: 1% 0;
+        background: white;
+    }
+    .appetizers{
+        width: 100%;
+        height: 10%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .drinks{
+        width: 100%;
+        height: 10%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .food{
+        width: 100%;
+        height: 40%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .desert{
+        width: 100%;
+        height: 10%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .item{
+        color: white;
+        .name{
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+            display: block;
+            color: goldenrod;
+        }
+        .description{
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+            display: block;
+        }
+        .price{
+            font-size: 1.3rem;
+            display: block;
+        }
+    }
+}
