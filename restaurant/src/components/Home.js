@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.scss';
 import { ExitFeature, motion } from 'framer-motion';
+import pdf from '../PDF/foodmenu.pdf'
 
 function Home() {
 
@@ -27,13 +28,15 @@ function Home() {
                     transition={{ duration: 2.5 }}
                     variants={variants}
                     className="name"> Lorenzo's Italian<br />Restaurant <span style={{ color: "goldenrod" }}>.</span></motion.span>
-                <motion.span
+                <motion.a
                     initial="initial"
                     animate="animate"
                     transition={{ duration: 3 }}
                     whileHover="whileHover"
                     variants={variants}
-                    className="button">Download Menu</motion.span>
+                    className="button"
+                    href={pdf}
+                    target="_blank">Download Menu</motion.a>
             </div>
             <motion.div
                 initial="initialSocial"

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Experience.scss';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import imgOne from '../ImagesA/iconic.jpg';
 import imgTwo from '../ImagesA/boattwo.jpg';
 import imgThree from '../ImagesA/outside.jpg';
@@ -12,10 +12,40 @@ import myVideo from '../Videos/video.mp4';
 import myVideoTwo from '../Videos/lastvideo.mp4';
 
 function Experience() {
+
+    const controls = useAnimation();
+
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    const handleScroll = () => {
+        const position = window.pageYOffset;
+        if (position < scrollPosition) {
+            controls.start({
+                y: 0,
+                transition: { duration: 1 },
+            })
+        } else {
+            controls.start({
+                y: 15,
+                transition: { duration: 1 },
+            })
+        }
+        setScrollPosition(position);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    });
+
     return (
         <div className="experience-container">
             <div className="top">
-                <div className="first"><img src={imgOne} /></div>
+                <div className="first">
+                    <motion.img animate={controls} src={imgOne} />
+                </div>
                 <div className="second">
                     <ReactPlayer
                         className="react-player"
@@ -26,7 +56,9 @@ function Experience() {
                         loop='true'
                     />
                 </div>
-                <div className="third"><img src={imgTwo} /></div>
+                <div className="third">
+                    <motion.img animate={controls} src={imgTwo} />
+                </div>
                 <span className="text">
                     Florence is just right in so many ways.
                     The city is just the right size to make it one of the most walkable cities in Italy.
@@ -46,12 +78,20 @@ function Experience() {
                         loop='true'
                     />
                 </div>
-                <div className="right"><img src={imgThree} /></div>
+                <div className="right">
+                    <motion.img animate={controls} src={imgThree} />
+                </div>
             </div>
             <div className="bottom">
-                <div className="first"><img src={imgFour} /></div>
-                <div className="second"><img src={imgFive} /></div>
-                <div className="third"><img src={imgSix} /></div>
+                <div className="first">
+                    <motion.img animate={controls} src={imgFour} />
+                </div>
+                <div className="second">
+                    <motion.img animate={controls} src={imgFive} />
+                </div>
+                <div className="third">
+                    <motion.img animate={controls} src={imgSix} />
+                </div>
                 <span className="text">
                     Florence is just right in so many ways.
                     The city is just the right size to make it one of the most walkable cities in Italy.
