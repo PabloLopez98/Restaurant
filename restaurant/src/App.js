@@ -16,15 +16,16 @@ function App() {
     initial: { x: -1000, opacity: 0 },
     animate: { x: 0, opacity: 1 },
   }
+
   return (
     <div className="App">
       <ReactPlayer
         className="react-player"
         url={myVideo}
-        muted='true'
-        volume='0'
-        //playing='true'
-        loop='true'
+        muted={true}
+        volume={0}
+        playing={false}
+        loop={true}
         width='100%'
         height='auto'
       />
@@ -37,7 +38,7 @@ function App() {
             transition={{ duration: 2 }}
             variants={variants}
           >
-            <li><i class="fas fa-pizza-slice"></i></li>
+            <li><i className="fas fa-pizza-slice"></i></li>
             <li><Link to="home" offset={0} spy={true} activeClass="active" smooth={true} duration={1000}>Home</Link></li>
             <li><Link to="experience" offset={0} spy={true} activeClass="active" smooth={true} duration={1000}>Experience</Link></li>
             <li><Link to="gallery" offset={0} spy={true} activeClass="active" smooth={true} duration={1000}>Gallery</Link></li>

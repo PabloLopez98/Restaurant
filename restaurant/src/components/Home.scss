@@ -1,9 +1,7 @@
 .home-container{
     height: 100%;
     width: 100%;
-
     position: relative;
-    
     .name-button-container{
         height: 80%;
         width: 100%;
@@ -50,6 +48,21 @@
                 transition: all .3s ease-in-out;
             }
         }
+    }
+}
+@media only screen and (max-width: 600px){
+    .name-button-container{
+        padding: 0 10%;
+        .name{
+            font-size: 6rem;
+        }
+        .button{
+            font-size: 2rem;
+            padding: 4%;
+        }
+    }
+    .social-medias-container{
+        visibility: hidden;
     }
 }
 }

@@ -50,10 +50,10 @@ function Experience() {
                     <ReactPlayer
                         className="react-player"
                         url={myVideo}
-                        muted='true'
-                        volume='0'
-                        //playing='true'
-                        loop='true'
+                        muted={true}
+                        volume={0}
+                        playing={true}
+                        loop={true}
                     />
                 </div>
                 <div className="third">
@@ -69,14 +69,31 @@ function Experience() {
             </div>
             <div className="middle">
                 <div className="left">
-                    <ReactPlayer
-                        className="react-player"
-                        url={myVideoTwo}
-                        muted='true'
-                        volume='0'
-                        //playing='true'
-                        loop='true'
-                    />
+
+                    {window.innerWidth < 900 ?
+
+                        (<ReactPlayer
+                            width='90%'
+                            height='auto'
+                            className="react-player"
+                            url={myVideoTwo}
+                            muted={true}
+                            volume={0}
+                            playing={true}
+                            loop={true}
+                        />) : (
+                            <ReactPlayer
+                                className="react-player"
+                                url={myVideoTwo}
+                                muted={true}
+                                volume={0}
+                                playing={true}
+                                loop={true}
+                            />
+                        )
+
+                    }
+
                 </div>
                 <div className="right">
                     <motion.img animate={controls} src={imgThree} />

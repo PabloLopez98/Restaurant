@@ -17,4 +17,17 @@
             }  
         }
     }
+    @media only screen and (max-width: 600px){
+        &{
+            padding-top: 50%;
+        }
+        .title{
+            margin: 0% 5%;
+            font-size: 4rem;
+        }
+        .the-swiper{
+            height: 50%;
+            width: 100%;
+        }
+    }
 }

@@ -64,4 +64,48 @@
             display: block;
         }
     }
+    @media only screen and (max-width: 600px){
+        &{
+            padding-top: 25%;
+        }
+        .title{
+            font-size: 4rem;
+            margin: 0 5%;
+        }
+        .section{
+            font-size: 2rem;
+            margin: 0 1rem;
+        }
+        .divider{
+            margin: 1rem 0;
+        }
+        .item{
+            margin: 0 5%;
+            .name{
+                font-size: 1.5rem;
+            }
+            .description{
+                font-size: 1rem;
+            }
+            .price{
+                font-size: 1rem;
+            }
+        }
+        .appetizers{
+            margin: 2rem 0;
+            height: 10%;
+        }
+        .drinks{
+            margin: 2rem 0;
+            height: 7%;
+        }
+        .food{
+            margin: 2rem 0;
+            height: 55%;
+        }
+        .desert{
+            margin: 2rem 0;
+            height: 5%;
+        }
+    }
 }
