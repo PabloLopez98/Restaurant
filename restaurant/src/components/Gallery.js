@@ -16,13 +16,17 @@ import './Gallery.scss';
 SwiperCore.use(EffectCoverflow)
 
 function Gallery() {
+
+    let num = (window.innerWidth < 900) ? 1 : 3;
+
     return (
         <div className="gallery-container">
             <span className="title">Gallery<span style={{ color: "goldenrod" }}>.</span></span>
+
             <Swiper
                 className="the-swiper"
                 effect="coverflow"
-                slidesPerView={3}
+                slidesPerView={num}
             >
                 <SwiperSlide className="images"><img src={g} /></SwiperSlide>
                 <SwiperSlide className="images"><img src={a} /></SwiperSlide>

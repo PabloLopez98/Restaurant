@@ -8,7 +8,8 @@ import Menu from './components/Menu';
 import Contact from './components/Contact';
 import { motion } from 'framer-motion';
 import ReactPlayer from 'react-player';
-import myVideo from './Videos/thevid.mp4';
+import desktopVid from './Videos/thevid.mp4';
+import mobileVid from './Videos/thevid.mp4';
 import './App.scss';
 
 function App() {
@@ -19,16 +20,29 @@ function App() {
 
   return (
     <div className="App">
-      <ReactPlayer
-        className="react-player"
-        url={myVideo}
-        muted={true}
-        volume={0}
-        playing={false}
-        loop={true}
-        width='100%'
-        height='auto'
-      />
+      {window.innerWidth < 900 ?
+        (<ReactPlayer
+          className="react-player"
+          url={mobileVid}
+          muted={true}
+          volume={0}
+          playing={true}
+          loop={true}
+          width='auto'
+          height='100%'
+        />) : (
+          <ReactPlayer
+            className="react-player"
+            url={desktopVid}
+            muted={true}
+            volume={0}
+            playing={true}
+            loop={true}
+            width='100%'
+            height='auto'
+          />
+        )
+      }
       <div className="overlay"></div>
       <div className="themenu-container">
         <div className="themenu">
